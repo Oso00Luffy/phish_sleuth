@@ -14,13 +14,17 @@ class WeeklyChallenge {
   final bool? userResponse;
 
   @HiveField(3)
-  final int points; // Points for completing the challenge
+  final int points;
+
+  @HiveField(4)
+  final String explanation; // Add explanation field
 
   WeeklyChallenge({
     required this.sender,
     required this.message,
     this.userResponse,
     required this.points,
+    required this.explanation,
   });
 
   WeeklyChallenge copyWith({bool? userResponse}) {
@@ -29,6 +33,7 @@ class WeeklyChallenge {
       message: message,
       userResponse: userResponse,
       points: points,
+      explanation: explanation,
     );
   }
 }

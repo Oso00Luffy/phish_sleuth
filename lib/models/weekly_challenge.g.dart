@@ -21,13 +21,14 @@ class WeeklyChallengeAdapter extends TypeAdapter<WeeklyChallenge> {
       message: fields[1] as String,
       userResponse: fields[2] as bool?,
       points: fields[3] as int,
+      explanation: fields[4] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, WeeklyChallenge obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(5)
       ..writeByte(0)
       ..write(obj.sender)
       ..writeByte(1)
@@ -35,7 +36,9 @@ class WeeklyChallengeAdapter extends TypeAdapter<WeeklyChallenge> {
       ..writeByte(2)
       ..write(obj.userResponse)
       ..writeByte(3)
-      ..write(obj.points);
+      ..write(obj.points)
+      ..writeByte(4)
+      ..write(obj.explanation);
   }
 
   @override

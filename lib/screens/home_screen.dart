@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'simulation_screen.dart';
 import 'feedback_screen.dart';
 import 'weekly_challenges_screen.dart';
+import 'challenge_feedback_screen.dart';
+import 'leaderboard_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -36,10 +38,30 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => WeeklyChallengesScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => WeeklyChallengesScreen()),
                 );
               },
               child: Text('Weekly Challenges'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ChallengeFeedbackScreen()),
+                );
+              },
+              child: Text('Challenge Feedback'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LeaderboardScreen()),
+                );
+              },
+              child: Text('Leaderboard'),
             ),
           ],
         ),
