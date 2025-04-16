@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'simulation_screen.dart';
 import 'feedback_screen.dart';
+import 'weekly_challenges_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -33,7 +34,10 @@ class HomeScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // Placeholder for Challenges Screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WeeklyChallengesScreen()),
+                );
               },
               child: Text('Weekly Challenges'),
             ),
