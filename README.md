@@ -19,7 +19,7 @@ PhishSleuth is a mobile app designed to simulate real-world social engineering a
 1. Install Flutter SDK: [Flutter Installation Guide](https://flutter.dev/docs/get-started/install)
 2. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/Oso00Luffy/phish_sleuth
    ```
 3. Navigate to the project directory:
    ```bash
